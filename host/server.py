@@ -39,7 +39,7 @@ def upload_file():
         if 'file' not in request.files:
             flash('No file part')
             return redirect(request.url)
-        file = request.files['file']
+        file = flask.request.files['image']
 
         # if user does not select file, browser also
         # submit a empty part without filename
